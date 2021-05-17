@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS - ponumerowane elementy dodawane po kliknięciu</title>
+
+    <style>
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            width: 1200px;
+            min-height: 100px;
+            margin: 100px auto;
+            text-align: center;
+            background-color: #eeeeee;
+            border-radius: 2px;
+        }
+
+        button {
+            position: absolute;
+            top: 40px;
+            left: calc(50% - 70px);
+            width: 140px;
+            padding: 10px;
+            border-radius: 4px;
+            border: none;
+            background-color: #00adb5;
+            cursor: pointer;
+        }
+
+        .wrapper > div {
+            margin: 5px;
+            width: 50px;
+            height: 50px;
+            background-color: #393e46;
+            color:#eeeeee;
+            font-family: "open sans";
+            line-height: 50px;
+        }
+
+        .wrapper > .circle {
+            border-radius: 50%;
+            background-color: #222831;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <button>Create an element!</button>
+        <!-- <div class="square">1</div>
+        <div class="square">2</div>
+        <div class="square">3</div>
+        <div class="circle">4</div> -->
+    </div>
+
+    <script>
+        const btn = document.querySelector("button");
+        const wrapper = document.querySelector(".wrapper");
+        let number = 1;
+
+                // FUNKCJA ANONIMOWA
+        // btn.addEventListener("click", function() {
+        //     console.log("Kliknięcie!");
+        // })
+
+                // FUNKCJA ZADEKLAROWANA
+        const addElement = function() {
+            const div = document.createElement("div");
+            div.textContent = number;
+
+            if (number%5 == 0) {
+                div.classList.add("circle");
+            }
+
+            wrapper.appendChild(div);
+            number++; //inkrementacja
+        }
+                // WYWOŁANIE FUNKCJI
+        btn.addEventListener("click", addElement);
+    
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Podaj hasło by odkryć wiadomość</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            text-align: center;
+            background-color: rgb(206, 206, 206);
+            font-family: 'Open Sans';
+        }
+
+        label, input {
+            margin: 100px 0 0 0;
+            height: 25px;
+            width: 200px;
+        }
+
+        .active {
+            background-color: #444;
+            color: #fff;
+        }
+
+        div {
+            width: 600px;
+            height: 300px;
+            border: 2px solid black;
+            margin: 20px auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <label for="pass">Wprowadź hasło: </label><input id="pass" type="text">
+    <div class="message"></div>
+
+    <script src="code.js"></script>
+</body>
+
+</html>

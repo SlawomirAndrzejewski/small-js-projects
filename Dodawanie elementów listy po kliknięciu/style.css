@@ -1,0 +1,16 @@
+button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 2px;
+    background-color: #ff5959;
+    color: #292929;
+    cursor: pointer;
+}
+
+li {
+    font-size: 14px;
+}
+
+.big {
+    font-size: 22px;
+}

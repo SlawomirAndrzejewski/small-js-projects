@@ -1,0 +1,14 @@
+body {
+    height: 300vh;
+    background-color: rgb(255, 168, 87);
+}
+
+div {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* width: 100px;
+    height: 100px; */
+    transform: translate(-50%, -50%);
+    background-color: rgb(15, 19, 75);
+}
